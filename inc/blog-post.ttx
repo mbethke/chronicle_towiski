@@ -1,0 +1,14 @@
+<h2><a href="[% top %][% entry.link %]">[% entry.title %]</a></h2>
+[% IF defined entry.tags %]
+   <h6>Tags:
+     [% FOREACH tag IN entry.tags %]
+       <a href="[% top %]tags/[% tag.tag %]">[% tag.tag %]</a>[% IF loop.is_last %].[% ELSE %], [% END %]
+     [% END %]
+   </h6>
+[% END %]
+[% entry.body | raw %]
+<p class="blog-list-detail">
+  Veröffentlicht am [% entry.date_loc %][% IF entry.time_loc %], [% entry.time_loc %][% END %] -
+  [% IF entry.comment_count %]<a href="[% top %][% entry.link | uri %]">[% entry.comment_count %] Kommentar[%- IF entry.comment_count > 1 -%]e[%- END -%].</a>[% ELSE %]Keine Kommentare[% END %]
+</p>
+

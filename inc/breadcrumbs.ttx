@@ -1,0 +1,15 @@
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="[% top %]">Home</a></li>
+        [% IF defined crumbs %]
+          [% FOREACH c IN crumbs %]
+            <li><span class="divider">/</span>
+	    [%- IF defined c.link %]
+	      <a href="[% top %][% c.link %]">[% c.name %]</a></li>
+	    [% ELSE %]
+	      [% c.name %]</li>
+	    [%- END -%]
+          [% END %]
+        [% END %]
+      </ul>
+    </div>

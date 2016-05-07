@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    [% INCLUDE 'html_head.ttx' WITH subtitle = 'Tagged "' _ tag _ '"' -%]
+  </head>
+  <body id="body">
+    [% INCLUDE 'page_top.ttx' %]
+    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [
+    	 { name => 'Tags', link => 'tags/' },
+	 { name => tag }
+       ] 
+    %]
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+        [% IF defined entries %]
+          [% FOREACH entry IN entries %]
+            [% INCLUDE 'blog-post.ttx' WITH entry=entry %]
+          [% END %]
+        [% END %]
+        </div>
+        <div class="span3 right">
+          [% INCLUDE 'sidebar.ttx' %]
+        </div>
+      </div>
+    </div>
+    [% INCLUDE 'footer.ttx' %]
+  </body>
+</html>

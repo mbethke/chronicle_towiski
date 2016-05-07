@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    [% INCLUDE 'html_head.ttx' WITH subtitle = "Archiv " _ month_name _ " " _ year -%]
+  </head>
+  <body id="body">
+    [% INCLUDE 'page_top.ttx' WITH active='arch' %]
+    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [
+    	{ name => 'Archive', link => 'archive/' },
+    	{ name => month_name _ ' ' _ year },
+	]
+    %]
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          [% FOREACH entry IN entries %]
+            [% INCLUDE 'blog-post.ttx' WITH entry=entry %]
+          [% END %]
+        </div>
+        <div class="span3 right">
+          [% INCLUDE 'sidebar.ttx' %]
+        </div>
+      </div>
+    </div>
+    [% INCLUDE 'footer.ttx' %]
+  </body>
+</html>

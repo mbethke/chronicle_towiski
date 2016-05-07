@@ -1,0 +1,8 @@
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>[% blog_title %][% IF defined subtitle %]&nbsp;-&nbsp;[% subtitle %][% END %]</title>
+    <link rel="shortcut icon" type="image/png" href="[% top %]/favicon.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="[% top %]index.rss">
+    <link rel="stylesheet" href="[% top %]css/bootstrap.css">
+    <link rel="stylesheet" href="[% top %]css/mezzanine.css">
+    <link rel="stylesheet" href="[% top %]css/bootstrap-responsive.css">

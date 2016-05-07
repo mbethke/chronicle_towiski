@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    [% INCLUDE 'html_head.ttx' -%]
+  </head>
+  <body id="body">
+    [% INCLUDE 'page_top.ttx' WITH active='' %]
+    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [ { name => title, link => link } ] %]
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+	  [% INCLUDE 'blog-post.ttx' WITH entry = {
+                body => $body,
+                comments_enabled => $comments_enabled,
+                date => $date,
+                date_loc => $date_loc,
+                date_short => $date_short,
+                date_short_loc => $date_short_loc,
+                file => $file,
+                id => $id,
+                iso_8601 => $iso_8601,
+                link => $link,
+                mtime => $mtime,
+                posted => $posted,
+                tags => $tags,
+                template => $template,
+                time => $time,
+                time_loc => $time_loc,
+                title => $title,
+                truncatedbody => $truncatedbody,
+	     }
+	   %]
+  	  [% IF defined comments %]
+    	    [% INCLUDE 'comment-loop.ttx' %]
+  	  [% END %]
+          [% INCLUDE 'add-comment.ttx' %]
+        </div>
+        <div class="span3 right">
+          [% INCLUDE 'sidebar.ttx' %]
+        </div>
+      </div>
+    </div>
+    [% INCLUDE 'footer.ttx' %]
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns="http://purl.org/rss/1.0/"
+>
+<channel rdf:about="[% top %]">
+  <title>[% blog_title %]</title>
+  <link>[% top %]</link>
+  <description>[% blog_subtitle %]</description>
+  <items>
+    <rdf:Seq>
+    [%- FOREACH entry IN entries -%]
+      <rdf:li rdf:resource="[% top %][% entry.link %]"/>
+    [%- END -%]
+    </rdf:Seq>
+  </items>
+</channel>
+
+[%- FOREACH entry IN entries -%]
+  <item rdf:about="[% top %][% entry.link %]">
+  <title>[% entry.title %]</title>
+  <link>[% top %][% entry.link %]</link>
+  <content:encoded>[% entry.body %]</content:encoded>
+  <dc:date>[% entry.iso_8601 %]</dc:date>
+  </item>
+[%- END -%]
+</rdf:RDF>

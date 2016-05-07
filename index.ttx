@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    [% INCLUDE 'html_head.ttx' -%]
+  </head>
+  <body id="body">
+    [% INCLUDE 'page_top.ttx' WITH active='home' %]
+    [% INCLUDE 'breadcrumbs.ttx' %]
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          [% IF entries %]
+            [% FOREACH entry IN entries %]
+              [% INCLUDE 'blog-post.ttx' WITH entry=entry %]
+	        [% END %]
+          [% END %]
+        </div>
+        <div class="span3 right">
+          [% INCLUDE 'sidebar.ttx' %]
+        </div>
+      </div>
+    </div>
+    [% INCLUDE 'footer.ttx' %]
+  </body>
+</html>

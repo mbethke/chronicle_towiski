@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    [% INCLUDE 'html_head.ttx' WITH subtitle = "Archiv" -%]
+  </head>
+  <body id="body">
+    [% INCLUDE 'page_top.ttx' WITH active='arch' %]
+    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [ { name => 'Archiv', link => 'archive/' } ] %]
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          [% IF defined archived_posts %]
+            <ul style="list-style:none">
+              [% FOREACH post IN archived_posts %]
+                <li><b>[% post.year %]</b>
+                  <ul style="list-style:none;">
+                    [% FOREACH month IN post.months %]
+                      <li><a href="[% top %]archive/[% post.year %]/[% month.month %]">[% month.month_name %] ([% month.count %])</a></li>
+                    [% END %]
+                  </ul>
+                </li>
+              [% END %]
+          </ul>
+          [% END %]
+        </div>
+        <div class="span3 right">
+          [% INCLUDE 'sidebar.ttx' %]
+        </div>
+      </div>
+    </div>
+    [% INCLUDE 'footer.ttx' %]
+  </body>
+</html>
