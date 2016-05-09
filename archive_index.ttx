@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="de">
   <head>
-    [% INCLUDE 'html_head.ttx' WITH subtitle = "Archiv" -%]
+    [% INCLUDE 'html_head.ttx' WITH subtitle = __('Archive') -%]
   </head>
   <body id="body">
     [% INCLUDE 'page_top.ttx' WITH active='arch' %]
-    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [ { name => 'Archiv', link => 'archive/' } ] %]
+    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [ { name => __('Archive'), link => 'archive/' } ] %]
     <div class="container">
       <div class="row">
         <div class="span9 middle">

@@ -1,6 +1,6 @@
 <div class="panel">
 [% IF recent_posts %]
-  <h3>Neue Artikel</h3>
+  <h3>[% __("New Posts") %]</h3>
   <ul class="unstyled recent-posts">
   [% FOREACH post IN recent_posts %]
     <li><b>[% post.date_short_loc %]</b>
@@ -11,6 +11,6 @@
   </ul>
 [% END %]
 
-<h3>RSS Feed</h3>
+<h3>[% __("RSS Feed") %]</h3>
 <a href="[% top %]index.rss">RSS</a>
 </div>

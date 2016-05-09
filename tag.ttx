@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="de">
   <head>
-    [% INCLUDE 'html_head.ttx' WITH subtitle = 'Tagged "' _ tag _ '"' -%]
+  [% INCLUDE 'html_head.ttx' WITH subtitle = __x('Tagged "{tag}"', tag => tag) -%]
   </head>
   <body id="body">
     [% INCLUDE 'page_top.ttx' %]
     [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [
-    	 { name => 'Tags', link => 'tags/' },
-	 { name => tag }
-       ] 
+        { name => __('Tags'), link => 'tags/' },
+        { name => tag }
+      ]
     %]
     <div class="container">
       <div class="row">

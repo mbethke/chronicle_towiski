@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="de">
   <head>
-    [% INCLUDE 'html_head.ttx' WITH subtitle = "Tags" -%]
+    [% INCLUDE 'html_head.ttx' WITH subtitle = __('Tags') -%]
     <style type="text/css">.largelist { font-size: large; list-style-type: none; list-style-position: inside; }</style>
   </head>
   <body id="body">
     [% INCLUDE 'page_top.ttx' WITH active='tags' %]
-    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [ { name => 'Tags', link => 'tags/' } ] %]
+    [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [ { name => __('Tags'), link => 'tags/' } ] %]
     <div class="container">
       <div class="row">
         <div class="span9 middle">
@@ -17,7 +17,7 @@
             [% END %]
             </ul>
           [% ELSE %]
-            <p>No tagged posts were found.</p>
+            <p>[% __("No tagged posts were found.") %]</p>
           [% END %]
         </div>
         <div class="span3 right">

@@ -2,28 +2,29 @@
 <script type="text/javascript" src="/js/jquery-1.7.1.min.js">
 </script>
 <div id="output">
-  <h3>Kommentieren</h3>
+  <h3>[% __("Leave a comment") %]</h3>
     <form action="comments.cgi" id="cform" name="cform" method="POST" accept-charset="utf-8">
       <input type="hidden" name="id" value="[% link | html %]" />
       <input type="hidden" name="robot" id="robot" value="" />
       <input type="hidden" name="frosty" id="frosty" value="&#9731;">
       <table>
-        <tr><td><b>Name</b>:</td>
+        <tr><td><b>[% __("Name") %]</b>:</td>
           <td><input type="text" size="55" name="name" /></td></tr>
-        <tr><td><b>Email</b>:</td>
+        <tr><td><b>[% __("Email") %]</b>:</td>
           <td><input type="text" size="55" name="mail" /></td></tr>
-        <tr><td><b>Website</b>:</td>
+        <tr><td><b>[% __("Website") %]</b>:</td>
           <td><input type="text" size="55" name="link" /></td></tr>
-        <tr><td colspan="2"><b>Kommentar</b><br />
+        <tr><td colspan="2"><b>[% __("Kommentar") %]</b><br />
             <textarea name="body" rows="10" cols="60"></textarea></td></tr>
-        <tr><td></td><td style="text-align:right"><input type="submit" name="submit" value="Abschicken"/></td></tr>
+        <tr><td></td><td style="text-align:right"><input type="submit"
+	name="submit" value="[% __('Submit') %]"/></td></tr>
       </table>
     </form>
 <div id="progress" style="display: none;">
-<p>Senden&nbsp;&hellip;&nbsp;<img src="progress.gif" alt="Progress"></p>
+<p>[% __("Senden") %]&nbsp;&hellip;&nbsp;<img src="progress.gif" alt="Progress"></p>
 </div>
-    <p>Kommentare ohne Namen, Email oder Text werden ignoriert.</p>
-    <p>Email-Adressen werden <em>nie</em> veröffentlicht, nur eventuelle Website-Links.</p>
+    <p>[% __("Kommentare ohne Namen, Email oder Text werden ignoriert.") %]</p>
+    <p>[% __("Email-Adressen werden <em>nie</em> veröffentlicht, nur eventuelle Website-Links.") %]</p>
 </div>
 
 <script type="text/JavaScript">

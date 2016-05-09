@@ -1,6 +1,6 @@
     <div class="container">
       <ul class="breadcrumb">
-        <li><a href="[% top %]">Home</a></li>
+        <li><a href="[% top %]">[% __('Home') %]</a></li>
         [% IF defined crumbs %]
           [% FOREACH c IN crumbs %]
             <li><span class="divider">/</span>

@@ -1,5 +1,5 @@
 <div id="comments">
-  <h3>Comments</h3>
+  <h3>[% __("Comments") %]</h3>
   [% FOREACH cmt in comments %]
   <div style="background-color: white; border: 1px solid grey; border-bottom: 4px solid grey; margin-bottom: 15px; padding:10px;">
     <div class="header">

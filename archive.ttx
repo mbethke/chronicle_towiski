@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="de">
   <head>
-    [% INCLUDE 'html_head.ttx' WITH subtitle = "Archiv " _ month_name _ " " _ year -%]
+    [% INCLUDE 'html_head.ttx' WITH subtitle = __("Archive") _ ' ' _ month_name _ " " _ year -%]
   </head>
   <body id="body">
     [% INCLUDE 'page_top.ttx' WITH active='arch' %]
     [% INCLUDE 'breadcrumbs.ttx' WITH crumbs = [
-    	{ name => 'Archive', link => 'archive/' },
-    	{ name => month_name _ ' ' _ year },
-	]
+        { name => __('Archive'), link => 'archive/' },
+        { name => month_name _ ' ' _ year },
+      ]
     %]
     <div class="container">
       <div class="row">

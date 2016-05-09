@@ -1,5 +1,5 @@
 <footer>
   <div class="container">
-    <p>Gebaut mit <a href="http://steve.org.uk/Software/chronicle">chronicle</a></p>
+    <p>[% __('Powered by <a href="http://steve.org.uk/Software/chronicle">chronicle') %]</a></p>
   </div>
 </footer>

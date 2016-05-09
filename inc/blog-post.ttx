@@ -8,7 +8,16 @@
 [% END %]
 [% entry.body | raw %]
 <p class="blog-list-detail">
-  Veröffentlicht am [% entry.date_loc %][% IF entry.time_loc %], [% entry.time_loc %][% END %] -
-  [% IF entry.comment_count %]<a href="[% top %][% entry.link | uri %]">[% entry.comment_count %] Kommentar[%- IF entry.comment_count > 1 -%]e[%- END -%].</a>[% ELSE %]Keine Kommentare[% END %]
+  [% __x('Posted on {date}', date => entry.date_loc) -%]
+  [%- IF entry.time_loc %]
+    &nbsp[% __x('at {time}', time => entry.time_loc) %]
+  [%- END %]&nbsp;&ndash;&nbsp;
+  [%- IF entry.comment_count -%]
+    <a href="[% top %][% entry.link | uri %]">
+    [%- __nx('1 comment', '{ncomments} comments', entry.comment_count, ncomments => entry.comment_count) -%]
+    </a>
+  [%- ELSE -%]
+    [%- __('No comments') -%]
+  [% END %]
 </p>
 
