@@ -55,7 +55,7 @@ msgstr "Kommentare ohne Namen, Email-Adressen oder Text werden ignoriert."
 msgid "Your email address will <b>never</b> be displayed, but your homepage will be."
 msgstr "Email-Adressen werden <em>nie</em> veröffentlicht, nur eventuelle Website-Links."
 
-msgid "Send"
+msgid "Sending"
 msgstr "Senden"
 
 msgid "Submit"

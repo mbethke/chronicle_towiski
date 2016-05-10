@@ -50,12 +50,12 @@ msgid "Comment"
 msgstr "Comentario"
 
 msgid "Your submission will be ignored if the name, email, or comment field is left blank."
-msgstr "Comentraios sin nombres, correo electrónico o texto serán descartados."
+msgstr "Comentarios sin nombres, correo electrónico o texto serán descartados."
 
 msgid "Your email address will <b>never</b> be displayed, but your homepage will be."
 msgstr "Su correo electrónico <em>nunca</em> se publicará, solamente el enlace a su sitio web si haya."
 
-msgid "Send"
+msgid "Sending"
 msgstr "Enviando"
 
 msgid "Submit"
