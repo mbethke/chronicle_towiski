@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: chronicle2-template\n"
+"POT-Creation-Date: 2016-05-09 12:55+0700\n"
+"PO-Revision-Date: 2016-05-09 13:43+0700\n"
+"Last-Translator: Matthias Bethke <m+libintl@towiski.de>\n"
+"Language-Team: Matthias Bethke <m+libintl@towiski.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: vim\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+
+msgid "New Posts"
+msgstr "Neue Artikel"
+
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Archive"
+msgstr "Archiv"
+
+msgid "Tagged \"{tag}\""
+msgstr "Mit \"{tag}\" getagged"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "No tagged posts were found."
+msgstr "Keine getaggten Artikel gefunden."
+
+msgid "Leave a comment"
+msgstr "Kommentieren"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Website"
+msgstr "Website"
+
+msgid "Comment"
+msgstr "Kommentar"
+
+msgid "Your submission will be ignored if the name, email, or comment field is left blank."
+msgstr "Kommentare ohne Namen, Email-Adressen oder Text werden ignoriert."
+
+msgid "Your email address will <b>never</b> be displayed, but your homepage will be."
+msgstr "Email-Adressen werden <em>nie</em> veröffentlicht, nur eventuelle Website-Links."
+
+msgid "Send"
+msgstr "Senden"
+
+msgid "Submit"
+msgstr "Abschicken"
+
+msgid "Posted on {date}"
+msgstr "Veröffentlicht am {date}"
+
+msgid "at %s"
+msgstr "um %s"
+
+#, c-format
+msgid "1 comment"
+msgid_plural "{ncomments} comments"
+msgstr[0] "1 Kommentar"
+msgstr[1] "{ncomments} Kommentare"
+
+msgid "Comments"
+msgstr "Kommentare"
+
+msgid "No comments"
+msgstr "Keine Kommentare"
+
+msgid "Powered by <a href=\"http://steve.org.uk/Software/chronicle\">chronicle</a>"
+msgstr "Gebaut mit <a href=\"http://steve.org.uk/Software/chronicle\">chronicle</a>"
+
+msgid "Search"
+msgstr "Suche"
+
+msgid "Go!"
+msgstr "Los!"
+
