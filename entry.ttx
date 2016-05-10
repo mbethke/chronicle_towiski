@@ -13,6 +13,7 @@
                 body => $body,
                 comments_enabled => $comments_enabled,
                 date => $date,
+                date_epoch => $date_epoch,
                 date_loc => $date_loc,
                 date_short => $date_short,
                 date_short_loc => $date_short_loc,

@@ -10,7 +10,14 @@
 <p class="blog-list-detail">
   [% __x('Posted on {date}', date => entry.date_loc) -%]
   [%- IF entry.time_loc %]
-    &nbsp[% __x('at {time}', time => entry.time_loc) %]
+    &nbsp[%
+      __nx(
+        'at {time}',
+        'at {time}',
+        strftime('%k', entry.date_epoch),
+        time => entry.time_loc
+      )
+    %]
   [%- END %]&nbsp;&ndash;&nbsp;
   [%- IF entry.comment_count -%]
     <a href="[% top %][% entry.link | uri %]">
