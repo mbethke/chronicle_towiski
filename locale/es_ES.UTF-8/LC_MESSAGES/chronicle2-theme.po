@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: chronicle2-template\n"
+"POT-Creation-Date: 2016-05-09 12:55+0700\n"
+"PO-Revision-Date: 2016-05-10 09:30+0700\n"
+"Last-Translator: Matthias Bethke <m+libintl@towiski.de>\n"
+"Language-Team: Matthias Bethke <m+libintl@towiski.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: vim\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+
+msgid "New Posts"
+msgstr "Nuevos Artículos"
+
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Archive"
+msgstr "Archivo"
+
+msgid "Tagged \"{tag}\""
+msgstr "Etiquetado \"{tag}\""
+
+msgid "Tags"
+msgstr "Etiquetas"
+
+msgid "No tagged posts were found."
+msgstr "So se ha encontrado ningun artículo etiquetado."
+
+msgid "Leave a comment"
+msgstr "Dejar un comentario"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Email"
+msgstr "Correo"
+
+msgid "Website"
+msgstr "Sitio web"
+
+msgid "Comment"
+msgstr "Comentario"
+
+msgid "Your submission will be ignored if the name, email, or comment field is left blank."
+msgstr "Comentraios sin nombres, correo electrónico o texto serán descartados."
+
+msgid "Your email address will <b>never</b> be displayed, but your homepage will be."
+msgstr "Su correo electrónico <em>nunca</em> se publicará, solamente el enlace a su sitio web si haya."
+
+msgid "Send"
+msgstr "Enviando"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Posted on {date}"
+msgstr "Publicado el {date}"
+
+msgid "at {time}"
+msgid_plural "at {time}"
+msgstr[0] "a la {time}"
+msgstr[1] "a las {time}"
+
+#, c-format
+msgid "1 comment"
+msgid_plural "{ncomments} comments"
+msgstr[0] "1 comentario"
+msgstr[1] "{ncomments} comentarios"
+
+msgid "Comments"
+msgstr "Comentarios"
+
+msgid "No comments"
+msgstr "No hay comentarios"
+
+msgid "Powered by <a href=\"http://steve.org.uk/Software/chronicle\">chronicle</a>"
+msgstr "Criado con <a href=\"http://steve.org.uk/Software/chronicle\">chronicle</a>"
+
+msgid "Search"
+msgstr "Búsqueda"
+
+msgid "Go!"
+msgstr "Buscar"
+
