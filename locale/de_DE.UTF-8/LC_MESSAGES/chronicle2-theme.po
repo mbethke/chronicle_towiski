@@ -64,8 +64,8 @@ msgstr "Abschicken"
 msgid "Posted on {date}"
 msgstr "Veröffentlicht am {date}"
 
-msgid "at %s"
-msgstr "um %s"
+msgid "at {time}"
+msgstr "um {time}"
 
 #, c-format
 msgid "1 comment"
