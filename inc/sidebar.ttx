@@ -1,14 +1,17 @@
 <div class="panel">
 [% IF recent_posts %]
   <h3>[% __("New Posts") %]</h3>
-  <ul class="unstyled recent-posts">
+  <dl class="unstyled recent-posts">
   [% FOREACH post IN recent_posts %]
-    <li><b>[% post.date_short_loc %]</b>
-    <ul style="list-style:none;">
-    <li><a href="[% top %][% post.link %]">[% post.title %]</a></li>
-    </ul></li>
+    [% IF 
+    	(not defined loop.peek_prev)
+	or loop.peek_prev.date_short != post.date_short
+    %]
+      <dt>[% post.date_short_loc %]</dt>
+    [% END %]
+    <dd><a href="[% top %][% post.link %]">[% post.title %]</a></dd>
   [% END %]
-  </ul>
+  </dl>
 [% END %]
 
 <h3>[% __("RSS Feed") %]</h3>
