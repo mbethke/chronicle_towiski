@@ -21,8 +21,8 @@
 <div id="progress" style="display: none;">
 <p>[% __("Sending") %]&nbsp;&hellip;&nbsp;<img src="[% top %]progress.gif" alt="Progress"></p>
 </div>
-    <p>[% __("Kommentare ohne Namen, Email oder Text werden ignoriert.") %]</p>
-    <p>[% __("Email-Adressen werden <em>nie</em> veröffentlicht, nur eventuelle Website-Links.") %]</p>
+    <p>[% __("Your submission will be ignored if the name, email, or comment field is left blank.") %]</p>
+    <p>[% __("Your email address will <b>never</b> be displayed, but your homepage will be.") | raw%]</p>
 </div>
 
 <script type="text/JavaScript">
