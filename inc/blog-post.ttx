@@ -1,13 +1,7 @@
 <h2><a href="[% top %][% entry.link %]">[% entry.title %]</a></h2>
-[% IF defined entry.tags %]
-   <h6>Tags:
-     [% FOREACH tag IN entry.tags %]
-       <a href="[% top %]tags/[% tag.tag %]">[% tag.tag %]</a>[% IF loop.is_last %].[% ELSE %], [% END %]
-     [% END %]
-   </h6>
-[% END %]
 [% entry.body | raw %]
-<p class="blog-list-detail">
+<div class="blog-list-detail">
+<p>
   [% __x('Posted on {date}', date => entry.date_loc) -%]
   [%- IF entry.time_loc %]
     &nbsp[%
@@ -18,7 +12,9 @@
         time => entry.time_loc
       )
     %]
-  [%- END %]&nbsp;&ndash;&nbsp;
+  [%- END %]
+[% IF comments_enabled %]
+  &nbsp;&ndash;&nbsp;
   [%- IF entry.comment_count -%]
     <a href="[% top %][% entry.link | uri %]">
     [%- __nx('1 comment', '{ncomments} comments', entry.comment_count, ncomments => entry.comment_count) -%]
@@ -26,5 +22,14 @@
   [%- ELSE -%]
     [%- __('No comments') -%]
   [% END %]
-</p>
-
+  </p>
+[% END %]
+[% IF defined entry.tags %]
+   <p><strong>Tags:</strong>
+     [% FOREACH tag IN entry.tags %]
+       <a href="[% top %]tags/[% tag.tag %]">[% tag.tag %]</a>
+       [%- IF not loop.is_last %], [% END -%]
+     [% END %]
+   </p>
+[% END %]
+</div>
