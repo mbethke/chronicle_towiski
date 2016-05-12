@@ -1,6 +1,4 @@
 [% IF comments_enabled %]
-<script type="text/javascript" src="/js/jquery-1.7.1.min.js">
-</script>
 <div id="output">
   <h3>[% __("Leave a comment") %]</h3>
     <form action="comments.cgi" id="cform" name="cform" method="POST" accept-charset="utf-8">
