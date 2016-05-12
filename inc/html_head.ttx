@@ -7,3 +7,6 @@
     <link rel="stylesheet" href="[% top %]css/mezzanine.css">
     <link rel="stylesheet" href="[% top %]css/bootstrap-responsive.css">
     <link rel="stylesheet" href="[% top %]css/towiski.css">
+    <script type="text/javascript" src="[% top %]js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="[% top %]js/bootstrap.js"></script>
+    <script type="text/javascript" src="[% top %]js/bootstrap-extras.js"></script>
