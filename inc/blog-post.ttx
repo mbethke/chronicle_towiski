@@ -4,7 +4,7 @@
 <p>
   [% __x('Posted on {date}', date => entry.date_loc) -%]
   [%- IF entry.time_loc %]
-    &nbsp[%
+    &nbsp;[%
       __nx(
         'at {time}',
         'at {time}',
