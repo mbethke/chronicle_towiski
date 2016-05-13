@@ -79,8 +79,8 @@ msgstr "Kommentare"
 msgid "No comments"
 msgstr "Keine Kommentare"
 
-msgid "Powered by <a href=\"http://steve.org.uk/Software/chronicle\">chronicle</a>"
-msgstr "Gebaut mit <a href=\"http://steve.org.uk/Software/chronicle\">chronicle</a>"
+msgid "Powered by {chronicle}"
+msgstr "Gebaut mit {chronicle}"
 
 msgid "Search"
 msgstr "Suche"
