@@ -12,7 +12,7 @@
           [% IF entries %]
             [% FOREACH entry IN entries %]
               [% INCLUDE 'blog-post.ttx' WITH entry=entry %]
-	        [% END %]
+	    [% END %]
           [% END %]
         </div>
         <div class="span3 right">
