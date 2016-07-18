@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    :include html_head { subtitle => __x('Tagged "{tag}"', tag => $tag) };
+  </head>
+  <body id="body">
+    :include page_top;
+    :include breadcrumbs { crumbs => [ { name => __('Tags'), link => 'tags/' }, { name => $tag } ] };
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+        :if defined $entries {
+          :for $entries -> $entry {
+            :include blog_post { entry => $entry };
+          :}
+        :}
+        </div>
+        <div class="span3 right">
+          :include sidebar;
+        </div>
+      </div>
+    </div>
+    :include footer;
+  </body>
+</html>

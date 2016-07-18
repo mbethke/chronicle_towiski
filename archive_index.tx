@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    :include html_head { subtitle => __('Archive') };
+  </head>
+  <body id="body">
+    :include page_top { active => 'arch' };
+    :include breadcrumbs { crumbs => [ { name => __('Archive'), link => 'archive/' } ] };
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          :if defined $archived_posts {
+            <ul style="list-style:none">
+              :for $archived_posts -> $post {
+                <li><b><: $post.year :></b>
+                  <ul style="list-style:none;">
+                    :for $post.months -> $month {
+                      <li><a href="<: $top :>archive/<: $post.year :>/<: $month.month :>"><: $month.month_name :>(<: $month.count :>)</a></li>
+                    :}
+                  </ul>
+                </li>
+              :}
+          </ul>
+          :}
+        </div>
+        <div class="span3 right">
+          :include sidebar;
+        </div>
+      </div>
+    </div>
+    :include footer;
+  </body>
+</html>

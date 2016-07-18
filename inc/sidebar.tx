@@ -1,0 +1,16 @@
+<div class="panel">
+:if $recent_posts {
+  <h3><: __("New Posts") :></h3>
+  <dl class="unstyled recent-posts">
+  :for $recent_posts -> $post {
+    :if not defined $~post.peek_prev or $~post.peek_prev.date_short != $post.date_short {
+      <dt><: $post.date_short_loc :></dt>
+    :}
+    <dd><a href="<: $top :><: $post.link :>"><: $post.title :></a></dd>
+  :}
+  </dl>
+:}
+
+<h3><: __("RSS Feed") :></h3>
+<a href="<: $top :>index.rss">RSS</a>
+</div>

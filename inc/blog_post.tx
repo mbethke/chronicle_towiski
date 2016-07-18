@@ -1,0 +1,38 @@
+<h2><a href="<: $top :><: $entry.link :>"><: $entry.title :></a></h2>
+<: $entry.body | raw :>
+<div class="blog-list-detail">
+<p>
+  <: __x('Posted on {date}', date => $entry.date_loc) -:>
+  :if $entry.time_loc {
+    &nbsp;<:
+      __nx(
+        'at {time}',
+        'at {time}',
+        strftime('%k', $entry.date_epoch),
+        time => $entry.time_loc
+      )
+    :>
+  :}
+:if $comments_enabled {
+  &nbsp;&ndash;&nbsp;
+  :if $entry.comment_count {
+    <a href="<: $top :><: $entry.link | uri :>">
+    <:- __nx('1 comment', '{ncomments} comments', $entry.comment_count, ncomments => $entry.comment_count) -:>
+    </a>
+  :}
+  :else {
+    <:- __('No comments') -:>
+  :}
+  </p>
+:}
+:if defined $entry.tags {
+   <p><strong>Tags:</strong>
+     :for $entry.tags -> $tag {
+       <a href="<: $top :>tags/<: $tag.tag :>"><: $tag.tag :></a>
+       :if not $~tag.is_last {
+         <:- ',' -:>
+       :}
+     :}
+   </p>
+:}
+</div>

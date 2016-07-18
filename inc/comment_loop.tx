@@ -1,0 +1,29 @@
+<div id="comments">
+  <h3><: __("Comments") :></h3>
+  [% FOREACH cmt in comments %]
+  <div style="background-color: white; border: 1px solid grey; border-bottom: 4px solid grey; margin-bottom: 15px; padding:10px;">
+    <div class="header">
+    <table style="width:100%; border-bottom: 1px solid grey;">
+    <tr><td width="50" style="text-align: center; vertical-align: middle;">
+      :if cmt.author {
+        <img alt="author" src="/spiral.gif" class="avatar" height="32" width="33" />
+      :}
+      :else {
+        <img alt="Gravatar" src="<: $cmt.gravitar :>" class="avatar" height="32" width="33" />
+      :}
+      </td>
+      <td>
+      :if cmt.link {
+        <cite><a href="<: $cmt.link :>"><: $cmt.name :></a></cite>
+      <: $ELSE :>
+        <cite><: $cmt.name :></cite>
+      :}
+      </td>
+    </tr>
+    <tr><td></td><td><: $cmt.date :></td></tr>
+    </table>
+    </div>
+    <div class="commentbody"><: $cmt.body :></div>
+  </div>
+  :}
+</div>

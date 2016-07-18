@@ -1,0 +1,10 @@
+<footer>
+  <div class="container">
+    <p>
+      <:- __x(
+        'Powered by {chronicle}',
+	chronicle => '<a href="http://steve.org.uk/Software/chronicle">chronicle</a>') | raw
+      -:>
+    </p>
+  </div>
+</footer>

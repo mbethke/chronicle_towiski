@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    :include html_head { subtitle => __("Archive") ~ ' ' ~ $month_name ~ " " ~ $year };
+  </head>
+  <body id="body">
+    :include page_top { active => 'arch' };
+    :include breadcrumbs { crumbs => [ { name => __('Archive'), link => 'archive/' }, { name => $month_name ~ ' ' ~ $year } ] };
+    
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          :for $entries -> $entry {
+            :include blog_post { entry => $entry };
+          :}
+        </div>
+        <div class="span3 right">
+          :include sidebar;
+        </div>
+      </div>
+    </div>
+    :include footer;
+  </body>
+</html>

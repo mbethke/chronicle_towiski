@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    :include html_head;
+  </head>
+  <body id="body">
+    :include page_top { active => '' };
+    :include breadcrumbs { crumbs => [ { name => $title, link => $link } ] };
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          :include blog_post { entry => { body => $body, comments_enabled => $comments_enabled, date => $date, date_epoch => $date_epoch, date_loc => $date_loc, date_short => $date_short, date_short_loc => $date_short_loc, file => $file, id => $id, iso_8601 => $iso_8601, link => $link, mtime => $mtime, posted => $posted, tags => $tags, template => $template, time => $time, time_loc => $time_loc, title => $title, truncatedbody => $truncatedbody } };
+          :if defined $comments {
+            :#include comment_loop
+            :include empty;
+          :}
+          :include add_comment;
+        </div>
+        <div class="span3 right">
+          :include sidebar;
+        </div>
+      </div>
+    </div>
+    :include footer;
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    :include html_head;
+  </head>
+  <body id="body">
+    :include page_top { active => 'home' };
+    :include breadcrumbs;
+    <div class="container">
+      <div class="row">
+        <div class="span9 middle">
+          :for $entries -> $entry {
+            :include blog_post { entry => $entry };
+          :}
+        </div>
+        <div class="span3 right">
+          :include sidebar;
+        </div>
+      </div>
+    </div>
+    :include footer;
+  </body>
+</html>

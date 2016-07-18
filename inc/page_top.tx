@@ -1,0 +1,32 @@
+:macro active_dropdown ->($name) {
+   <:- "dropdown" ~ ( 'active' == $name ? ' active' : '') -:>
+:}
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="<: $top :>"><: $blog_title :></a>
+          :if defined $blog_subtitle {
+            <p class="navbar-text"><: $blog_subtitle :></p>
+          :}
+          <div class="nav-collapse collapse">
+            <form action="https://www.google.de/" class="navbar-search pull-right input-append">
+              <input type="hidden" name="q" value="site:blog.towiski.de">
+              <input class="search-query" placeholder="<: __('Search') :>" type="text" name="q" value="">
+              <input type="submit" class="btn" value="<: __('Go!') :>">
+            </form>
+            <ul class="nav pull-right">
+              <li class="<: active_dropdown('home') :>" id="dropdown-menu-home"><a href="<: $top :>"><: __("Home") :></a></li>
+              <li class="<: active_dropdown('tags') :>" id="dropdown-menu-tags"><a href="<: $top :>tags/"><: __("Tags") :></a></li>
+              <li class="<: active_dropdown('arch') :>" id="dropdown-menu-archive"><a href="<: $top :>archive/"><: __("Archive") :></a></li>
+              <li class="divider-vertical"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>

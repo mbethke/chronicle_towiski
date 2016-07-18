@@ -1,0 +1,52 @@
+:if $comments_enabled {
+<div id="output">
+  <h3>[% __("Leave a comment") %]</h3>
+    <form action="comments.cgi" id="cform" name="cform" method="POST" accept-charset="utf-8">
+      <input type="hidden" name="id" value="[% link | html %]" />
+      <input type="hidden" name="robot" id="robot" value="" />
+      <input type="hidden" name="frosty" id="frosty" value="&#9731;">
+      <table>
+        <tr><td><b><: __("Name") :></b>:</td>
+          <td><input type="text" size="55" name="name" /></td></tr>
+        <tr><td><b><: __("Email") :></b>:</td>
+          <td><input type="text" size="55" name="mail" /></td></tr>
+        <tr><td><b><: __("Website") :></b>:</td>
+          <td><input type="text" size="55" name="link" /></td></tr>
+        <tr><td colspan="2"><b><: __("Kommentar") :></b><br />
+            <textarea name="body" rows="10" cols="60"></textarea></td></tr>
+        <tr><td></td><td style="text-align:right"><input type="submit"
+	name="submit" value="<: __('Submit') :>"/></td></tr>
+      </table>
+    </form>
+<div id="progress" style="display: none;">
+<p><: __("Sending") :>&nbsp;&hellip;&nbsp;<img src="<: $top :>progress.gif" alt="Progress"></p>
+</div>
+    <p>[% __("Your submission will be ignored if the name, email, or comment field is left blank.") %]</p>
+    <p>[% __("Your email address will <b>never</b> be displayed, but your homepage will be.") | raw%]</p>
+</div>
+
+<script type="text/JavaScript">
+<!--
+    $(document).ajaxStart(function() { $("div#progress").show(); });
+    $(document).ajaxComplete(function() { $("div#progress").hide(); });
+
+    $(document).ready(function(){
+       $("#cform").submit(function(){
+           var data = $("#cform").serialize();
+           data = data + "&ajax=1";
+
+           $.ajax({
+	        type: "POST",
+	        url: "/cgi-bin/comments.cgi",
+	        data: data,
+	        success: function(data) {
+	                $("#output").html( data );
+	            }
+	        });
+
+           return false;
+       });
+    });
+  -->
+</script>
+:}

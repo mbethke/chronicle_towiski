@@ -1,0 +1,16 @@
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="<: $top :>"><: __('Home') :></a></li>
+        :if defined $crumbs {
+          :for $crumbs -> $c {
+            <li><span class="divider">/</span>
+	        :if defined $c.link {
+	          <a href="<: $top :><: $c.link :>"><: $c.name :></a></li>
+	        :}
+	        :else {
+	          <: $c.name :></li>
+	        :}
+          :}
+        :}
+      </ul>
+    </div>
