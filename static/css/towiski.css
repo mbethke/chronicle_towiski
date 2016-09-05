@@ -4,3 +4,7 @@
 .recent-posts dt { 
   margin-top: 0.5ex ;
 }
+dd {
+  display: list-item;
+  list-style-type: disc;
+}
